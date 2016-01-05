@@ -5,5 +5,5 @@ class HomeController < ApplicationController
 end 
 def about 
 end 
-def about
+def contact
 end
