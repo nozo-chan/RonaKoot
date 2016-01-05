@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount Piggybak::Engine => '/checkout', as: :piggybak
+  mount PiggybakTaxonomy::Engine => '/Ronakoot', :as => 'piggybak_taxonomy'
+  mount PiggybakCoupons::Engine => '/Ronakoot', :as => 'piggybak_coupons'
+  mount PiggybakGiftcerts::Engine => '/Ronakoot', :as => 'piggybak_giftcerts'
+  mount PiggybakBundleDiscounts::Engine => '/Ronakoot', :as => 'piggybak_bundle_discounts'
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -11,6 +16,7 @@ Rails.application.routes.draw do
   get 'contact' => 'home#contact'
   get 'gallery' => 'photogallery#gallery'
   get 'canvas'  => 'newgallery#canvas'
+  
   get 'paintings'  => 'newgallery#paintings'
   get 'expositions' => 'news#expositions'
   get 'news' => 'news#news'
@@ -23,6 +29,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
 
   # Example resource route with options:
   #   resources :products do
