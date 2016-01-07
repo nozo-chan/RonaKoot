@@ -9,11 +9,11 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
- *= require_tree .
  *= require_self
+ *= require fancybox
+ *= require_tree .
  */
-body { padding-top: 100px; }
+body { padding-top: 100px; margin-top: 50px !important;}
 footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
@@ -50,3 +50,19 @@ text-align: center;}
 #products td {
   padding-right: 15px;
 }
+
+		.auto-style1 {
+			text-align: center;
+		}
+		.auto-style2 {
+			text-align: right;
+		}
+		.auto-style3 {
+			font-size: x-large;
+		}
+		.auto-style4 {
+			letter-spacing: 3px;
+		}
+		.auto-style5 {
+			margin-top: 33px;
+		}
