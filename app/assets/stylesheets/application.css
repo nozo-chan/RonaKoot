@@ -42,3 +42,11 @@ text-align: center;
 
 #form { 
 text-align: center;}
+
+#products thead th { 
+	min-width: 100px;
+}
+
+#products td {
+  padding-right: 15px;
+}
