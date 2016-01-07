@@ -5,8 +5,7 @@
 <META NAME="robots" CONTENT="all">
 	<meta name="keywords" content="Swarovski crystal component; fine art painting; jewelry design.">
 	<meta name="description" content="Paintings with hundreds of silveren Swarovski crystal components. Jewelry with multiple diamonds and gemstones">
-	<link href="style.css" rel="stylesheet" type="text/css" />
-	<script src="rollover.js" type="text/javascript"></script>
+	
 <style type="text/css">
 		.auto-style1 {
 			text-align: center;
@@ -43,9 +42,43 @@
 </table>
 
 
-<p>
-	<li>Email Address: Ronakoot@gmail.com</li>
-	<li>Phone number:0650461325</li>
-	<li>Facebook: RonaKoot</li>
+<div id="title">
+<h3>Enquires</h3>
+</div>
 
+
+
+<div id="form">
+<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+	<div class="row">
+		<label for="name">Your name:</label><br />
+		<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+	</div>
+	<div class="row">
+		<label for="email">Your email:</label><br />
+		<input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+	</div>
+	<div class="row">
+		<label for="message">Your message:</label><br />
+		<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+	</div>
+	<input id="submit_button" type="submit" value="Send email" />
+</form>						
+</div>
+
+<br>
+<br>
+<br>
+Social media 
+<p>
+<%= link_to "http://www.facebook.com/mypage", :target => "_blank" do %>
+  <%= image_tag("facebook.png", :class => "facebook_icon", :alt => "Facebook", :width => 50, :height => 50) %>     
+<% end %>  
+<%= link_to "https://nl.linkedin.com/in/rona-koot-a6968b88", :target => "_blank" do %>
+  <%= image_tag("linkedin.png", :class => "linkedin_icon", :alt => "linkedin", :width => 50, :height => 50) %>     
+<% end %> 
 </p>
+
+
+
+

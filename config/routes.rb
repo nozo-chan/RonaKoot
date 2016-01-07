@@ -1,25 +1,26 @@
 Rails.application.routes.draw do
   
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  mount Piggybak::Engine => '/checkout', as: :piggybak
-  mount PiggybakTaxonomy::Engine => '/Ronakoot', :as => 'piggybak_taxonomy'
-  mount PiggybakCoupons::Engine => '/Ronakoot', :as => 'piggybak_coupons'
-  mount PiggybakGiftcerts::Engine => '/Ronakoot', :as => 'piggybak_giftcerts'
-  mount PiggybakBundleDiscounts::Engine => '/Ronakoot', :as => 'piggybak_bundle_discounts'
+
   devise_for :users
+  
+  get '/cart' => 'cart#index'
+  get '/cart/clear' => 'cart#clearCart'
+  get '/cart/:id' => 'cart#add'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  root  'home#index'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+
+  resources :products
+
+  root  'home#index'
   get 'about' => 'home#about'
   get 'contact' => 'home#contact'
   get 'gallery' => 'photogallery#gallery'
-  get 'canvas'  => 'newgallery#canvas'
-  
-  get 'paintings'  => 'newgallery#paintings'
   get 'expositions' => 'news#expositions'
   get 'news' => 'news#news'
+  # get ':slug' => 'pages#show'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
