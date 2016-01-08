@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get '/users' => 'home#index'
 
   devise_for :users
   
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
   get 'gallery' => 'photogallery#gallery'
   get 'expositions' => 'news#expositions'
   get 'news' => 'news#news'
+
   # get ':slug' => 'pages#show'
 
 

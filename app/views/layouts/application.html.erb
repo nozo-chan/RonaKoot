@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css">
 
   <title>RONA KOOT | Painting Swarovski Jewelry</title>
-  
+
   <meta name="robots" content="all">
   <meta name="keywords" content="Swarovski crystal component; fine art painting; jewelry design.">
   <meta name="description" content="Paintings with hundreds of silveren Swarovski crystal components. Jewelry with multiple diamonds and gemstones">
@@ -17,95 +17,99 @@
 </head>
 <body>
 
-<table id="header">
-  <tr>
-    <td class="col1"></td>
-    <td class="col2">
-    <p></p>
-    <p></p>
-    <p>&nbsp;</p>
-    <p class="auto-style2">&nbsp;<span style="letter-spacing: 12px"><font size="6" face="Cambria">RONA KOOT</font></span></p>
-    <p class="auto-style2"><span style="letter-spacing: 8px">
-    <font face="Cambria" size="1" color="#434343">FINE ART PAINTING 
-    &amp; JEWELRY DESIGN</font></span></p>
-    <p style="margin-top: 0; margin-bottom: 0" class="auto-style1">
-    &nbsp;</td>
-    <td class="col3"></td>
-  </tr>
-</table>
+  <table id="header">
+    <tr>
+      <td class="col1"></td>
+      <td class="col2">
+        <p></p>
+        <p></p>
+        <p>&nbsp;</p>
+        <p class="auto-style2">&nbsp;<span style="letter-spacing: 12px"><font size="6" face="Cambria">RONA KOOT</font></span></p>
+        <p class="auto-style2">
+          <span style="letter-spacing: 8px">
+            <font face="Cambria" size="1" color="#434343">FINE ART PAINTING &amp; JEWELRY DESIGN</font>
+          </span>
+        </p>
+        <p style="margin-top: 0; margin-bottom: 0" class="auto-style1">&nbsp;</p>
+      </td>
+      <td class="col3"></td>
+    </tr>
+  </table>
 
-<!-- login-signup-logout links -->
-  <div class="container">
-    <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-    <p class="navbar-text pull-right">
-      <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-      <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-      <% end %>
-      <%= yield %>
-    </div>	
-<!-- navigation start -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">RonaKoot</a>
-        </div>
-<!-- navigationbar with links -->
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-           <li class="active"><a href="/about">About</a></li>
-           <li class="active"><a href="/gallery">Gallery</a></li>
-           <li class="active"><a href="/contact">Contact</a></li>
-            <li class="active"><a href="/products">Shop</a></li>
+          <!-- login-signup-logout links -->
+          <div class="container">
+            <% if notice %>
+            <p class="alert alert-success"><%= notice %></p>
+            <% end %>
+            <% if alert %>
+            <p class="alert alert-danger"><%= alert %></p>
+            <% end %>
+            <p class="navbar-text pull-right">
+              <% if user_signed_in? %>
+              Logged in as <strong><%= current_user.email %></strong>.
+              <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+              <% else %>
+              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+              <% end %>
 
-           <li class="dropdown"><a href="/newgallery" class="dropdown-toggle" data-toggle="dropdown">News<span class="caret"></span></a>
-             <ul class="dropdown-menu">
-               <li><a href="/news">News</a></li>
-               <li><a href="/expositions">Expositons</a></li>
-             </ul>
-           </li>
-           <div id="cart"> 
-            
-           <% if cart = session[:cart] %>
-                 <% quantity = cart.values.inject(:+) %>
-                <%= link_to image_tag("shopping_cart", :width => "50") , cart_path %>
-                <%= quantity %>
-          <%end%>
-           </div>
+            </p>
 
-         </ul>
-       </div>
-     </div>
-   </nav>
-<!-- navigation end  -->
+             <%= yield %>
 
-<!-- footer -->
-   <div class="container">
-    <div id="sn" class="six columns">
-      <ul>
-       
-      </ul>
-    </div>
-    <footer>
-      <div class="container">
-        RonaKoot 2015
-      </div>
-    </footer>
+            </div>	
+      <!-- navigation start -->
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/">RonaKoot</a>
+                </div>
+     <!-- navigationbar with links -->
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="/about">About</a></li>
+                    <li class="active"><a href="/gallery">Gallery</a></li>
+                    <li class="active"><a href="/contact">Contact</a></li>
+                    <li class="active"><a href="/products">Shop</a></li>
+
+                    <li class="dropdown"><a href="/newgallery" class="dropdown-toggle" data-toggle="dropdown">News<span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                       <li><a href="/news">News</a></li>
+                       <li><a href="/expositions">Expositons</a></li>
+                     </ul>
+                   </li>
+                   <div id="cart"> 
+
+                     <% if cart = session[:cart] %>
+                     <% quantity = cart.values.inject(:+) %>
+                     <%= link_to image_tag("shopping_cart", :width => "50") , cart_path %>
+                     <%= quantity %>
+                     <%end%>
+                   </div>
+
+                 </ul>
+               </div>
+             </div>
+           </nav>
+
+
+  <!-- navigation end  -->
+  <!-- footer -->
+        <div class="container">
+            <div id="sn" class="six columns">
+            </div>
+            <footer>
+              <div class="container">
+                RonaKoot 2015
+              </div>
+            </footer>
     <script src="//railsgirls.com/assets/bootstrap.js"></script>
 
   </body>
